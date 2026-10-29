@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#253782">
+  <meta name="description" content="Pemeriksa format tanggal kedaluwarsa untuk tim Quality Control dan operator produksi.">
+  <title>QC Coding — Pemeriksa Expired Date</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Coding Format beranda"><img class="brand-logo" src="./logo-qc.png" alt=""><span>Coding Format<span class="brand-divider"></span><small>QUALITY ASSURANCE</small></span></a>
+    <div class="header-right"><span class="internal-tag">INTERNAL TOOL</span><span class="system-status"><i></i> Sistem aktif</span></div>
+  </header>
+  <main class="workspace">
+    <div class="breadcrumb-line"><a href="./">Pilih plant</a><span>/</span><strong id="plant-label">—</strong><span>/</span><span>ED Format Checker</span><a href="./" class="change-plant">← Ganti plant</a></div>
+    <section class="intro checker-intro">
+      <div class="today-card"><span class="calendar-icon" aria-hidden="true">▦</span><div><span class="small-label">TANGGAL PRODUKSI HARI INI</span><strong id="today-label">—</strong><span class="today-foot"><i></i> Mengikuti tanggal perangkat</span></div></div>
+    </section>
+    <div class="tool-grid">
+      <section class="selection-card" aria-labelledby="selection-title">
+        <div class="card-heading"><span class="heading-icon" aria-hidden="true">≡</span><div><h2 id="selection-title">Pilih Produk &amp; Tujuan Distribusi</h2></div><span class="step-count">01 — 02</span></div>
+        <form id="checker-form">
+          <div class="field-row">
+          <div class="field-group"><label for="product"><span class="step-number">01</span> Produk <span class="required">*</span></label><select id="product" class="form-select" disabled><option value="">Memuat master produk…</option></select><p class="field-hint">Pilih produk yang sedang diproduksi.</p></div>
+          <div class="field-group"><label for="variant"><span class="step-number">02</span> Tujuan <span class="required">*</span></label><select id="variant" class="form-select" disabled><option value="">Pilih produk terlebih dahulu</option></select><p class="field-hint">Format coding menyesuaikan negara tujuan.</p></div>
+          </div>
+          <div class="field-group" id="flavor-field" hidden><label for="flavor"><span class="step-number">03</span> Varian <span class="required">*</span></label><select id="flavor" class="form-select" disabled><option value="">Pilih produk dan tujuan terlebih dahulu</option></select><p class="field-hint">Varian menentukan tulisan pada koding karton.</p></div>
+          <div class="selection-footer"><span><span class="auto-icon">↻</span> Hasil diperbarui otomatis</span><button id="reset" type="reset" disabled>↺ <span>Reset pilihan</span></button></div>
+        </form>
+        <div id="data-error" class="data-error" role="alert" hidden><strong>Master data tidak dapat dimuat.</strong><p>Periksa koneksi lalu coba kembali.</p><button type="button" id="retry">Coba lagi</button></div>
+      </section>
+      <div class="result-panels">
+      <section class="result-card" aria-labelledby="result-title">
+        <div class="result-heading"><div><h2 id="result-title">Format koding kemasan primer</h2></div><span id="result-status" class="result-status">Menunggu pilihan</span></div>
+        <div class="inkjet" id="inkjet" aria-live="polite" aria-atomic="true"><div class="terminal-top"><span><i></i> CODING OUTPUT</span><span id="format-label">—</span></div><div id="empty-preview" class="empty-preview"><span class="scan-icon" aria-hidden="true">[ <span>−</span> ]</span><strong>Siap untuk verifikasi</strong><p>Pilih produk dan tujuan untuk melihat format coding.</p></div><div id="filled-preview" class="filled-preview" hidden><span class="output-caption">PACKAGING CODE</span><output id="coding-output"></output><span id="output-product"></span></div><div class="terminal-bottom"><span>● ● ●</span><span>INKJET PREVIEW / 1:1 TEXT</span></div></div>
+        <details id="master-details" class="master-details" hidden><summary>Lihat pola master coding</summary><pre id="master-template"></pre><p>PR = tanggal produksi · EX / tanggal tanpa awalan = ED · hh:mm = jam produksi perangkat</p></details>
+        <div class="metadata"><div><span>Tanggal produksi</span><strong id="production-date">—</strong></div><div><span>Umur simpan</span><strong id="shelf-life">— <small>hari</small></strong></div><div><span>Tanggal kedaluwarsa</span><strong id="expiry-date">—</strong></div></div>
+        <div class="result-bottom"><span id="result-note"><span aria-hidden="true">ⓘ</span> Lengkapi pilihan untuk melihat hasil.</span><button class="copy-button" id="copy" type="button" disabled><span aria-hidden="true">▣</span> Salin coding</button></div>
+      </section>
+      <section class="result-card carton-card" aria-labelledby="carton-title">
+        <div class="result-heading"><div><h2 id="carton-title">Format koding karton</h2></div><span id="carton-status" class="result-status">Menunggu pilihan</span></div>
+        <div class="inkjet" id="carton-inkjet" aria-live="polite" aria-atomic="true">
+          <div class="terminal-top"><span><i></i> CARTON OUTPUT</span><span id="carton-format-label">—</span></div>
+          <div id="carton-empty" class="empty-preview"><span class="scan-icon" aria-hidden="true">[ − ]</span><strong id="carton-empty-title">Siap untuk verifikasi</strong><p id="carton-empty-note">Pilih produk, tujuan, dan varian untuk melihat koding karton.</p></div>
+          <div id="carton-filled" class="filled-preview" hidden><span class="output-caption">CARTON CODE</span><output id="carton-output" class="carton-output"></output><span id="carton-product" class="output-product"></span></div>
+          <div class="terminal-bottom"><span>● ● ●</span><span>CARTON / 1:1 TEXT</span></div>
+        </div>
+        <details id="carton-master-details" class="master-details" hidden><summary>Lihat pola master karton</summary><pre id="carton-master-template"></pre><p>VARIAN mengikuti kode varian untuk produk dan tujuan yang dipilih.</p></details>
+        <div class="carton-metadata"><div><span>Tanggal kedaluwarsa</span><strong id="carton-expiry">—</strong></div><p>Mengikuti kemasan primer</p></div>
+        <div class="result-bottom"><span id="carton-note">Lengkapi pilihan untuk melihat hasil.</span><button class="copy-button" id="copy-carton" type="button" disabled>Salin koding karton</button></div>
+      </section>
+      </div>
+    </div>
+    <aside class="notice"><span class="notice-icon" aria-hidden="true">ⓘ</span><div><strong>Verifikasi sebelum mulai produksi</strong><p>Hasil dihitung dari tanggal perangkat + umur simpan. Pastikan tanggal perangkat benar dan cocokkan hasil dengan master spesifikasi yang berlaku.</p></div><button type="button" id="guide-button">Panduan penggunaan <span aria-hidden="true">↗</span></button></aside>
+    <section class="how-it-works" aria-label="Cara kerja"><span class="how-label">TIGA LANGKAH, LEBIH PASTI.</span><div><span>01</span> Pilih produk <b>→</b></div><div><span>02</span> Tentukan tujuan <b>→</b></div><div><span>03</span> Verifikasi & cetak <span class="how-check">✓</span></div></section>
+    <footer><span><strong>QC Coding</strong> <span class="footer-dot">·</span> Ketelitian di setiap kemasan.</span><span class="demo-tag">Master data: Format.csv</span><span>ED Format Checker <span class="version">v1.1</span></span></footer>
+  </main>
+  <dialog id="guide-dialog" aria-labelledby="guide-title"><div class="dialog-heading"><h2 id="guide-title">Panduan penggunaan</h2><button type="button" id="close-guide" aria-label="Tutup panduan">×</button></div><ol><li>Pilih plant yang sesuai, lalu pastikan tanggal dan zona waktu perangkat sesuai lokasi produksi.</li><li>Pilih produk, lalu pilih tujuan distribusi.</li><li>Periksa tanggal produksi, umur simpan, tanggal kedaluwarsa, dan susunan baris coding.</li><li>Salin coding ke pengaturan mesin dan cocokkan hasil cetak dengan master spesifikasi yang disahkan sebelum produksi.</li></ol><p class="guide-note">Data berasal dari Format.csv. PR memakai tanggal produksi; EX dan tanggal tanpa awalan memakai tanggal kedaluwarsa. D = hari, M = bulan (MMM = singkatan Inggris), Y = tahun, h = jam, m = menit. Jam diperbarui mengikuti menit perangkat. ED = hari ini + umur simpan dalam hari kalender. Pilih varian untuk melihat koding karton. VARIAN mengikuti master varian dan ED karton sama dengan kemasan primer.</p></dialog>
+  <div id="toast" class="toast-message" role="status" hidden></div>
+</body>
+</html>

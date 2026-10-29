@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "prod-1",
+    "plant": "PSR1",
+    "name": "AMD 65",
+    "variants": [
+      {
+        "id": "prod-1-dest-1",
+        "name": "Lokal",
+        "source_variant": "All",
+        "coding_template": "DDMMYY A61A\nhh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DDMMYY AA VARIAN PSR",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-1-dest-2",
+        "name": "Ekspor Philippines",
+        "source_variant": "All",
+        "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\nA61A hh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "EX : DD MMM YY AA VARIAN PSR 5X1",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-1-dest-3",
+        "name": "Ekspor Maldives",
+        "source_variant": "All",
+        "coding_template": "PR : DDMMYYYY\nEX : DDMMYYYY\nA61A hh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "EX : DDMMYYYY AA VARIAN PSR 5X2 MV",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-1-dest-4",
+        "name": "Ekspor China",
+        "source_variant": "All",
+        "coding_template": "PR : YYYY MM DD\nEX : YYYY MM DD\nA61A hh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "PR:YYYYMMDD EX:YYYYMMDD AA VARIAN PSR CN",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLU",
+            "source_destination": "Ekspor China"
+          },
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORI",
+            "source_destination": "Ekspor China"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STW",
+            "source_destination": "Ekspor China"
+          }
+        ]
+      },
+      {
+        "id": "prod-1-dest-5",
+        "name": "Ekspor Brunei",
+        "source_variant": "All",
+        "coding_template": "EX : DD MM YY\nA61A hh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DD MM YY AA VARIAN PSR 5X1 BN",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-1-dest-6",
+        "name": "Ekspor Taiwan",
+        "source_variant": "All",
+        "coding_template": "PR : DD MM YYYY\nEX : DD MM YYYY\nA61A hh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "EX : DD MM YYYY AA VARIAN PSR 5X1 TW",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-1-dest-7",
+        "name": "Ekspor Cambodia",
+        "source_variant": "All",
+        "coding_template": "PR : DD MM YY\nEX : DD MM YY\nA61A hh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "EX : DD MM YY AA VARIAN PSR 5X1 CB",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-1-dest-8",
+        "name": "Ekspor Somaliland",
+        "source_variant": "All",
+        "coding_template": "DDMMYY A61A\nhh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DDMMYY AA VARIAN PSR 5X1 SO",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod-2",
+    "plant": "PSR1",
+    "name": "MM80",
+    "variants": [
+      {
+        "id": "prod-2-dest-1",
+        "name": "Ekspor Philippines",
+        "source_variant": "All",
+        "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\nA51A hh:mm PSR",
+        "shelf_life_days": 274,
+        "carton_template": "EX : DD MMM YY AA VARIAN PSR",
+        "flavor_options": [
+          {
+            "id": "banana",
+            "name": "Banana",
+            "code": "BANANA",
+            "source_destination": "All"
+          },
+          {
+            "id": "green-apple",
+            "name": "Green Apple",
+            "code": "GREEN APPLE",
+            "source_destination": "All"
+          },
+          {
+            "id": "melon",
+            "name": "Melon",
+            "code": "MELON",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod-3",
+    "plant": "PSR2",
+    "name": "SP40",
+    "variants": [
+      {
+        "id": "prod-3-dest-1",
+        "name": "Lokal",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 1AA\nhh:mm 1PSR",
+        "shelf_life_days": 182,
+        "carton_template": "DDMMYY VARIAN 1234 H PSR",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod-4",
+    "plant": "PSR2",
+    "name": "EM80",
+    "variants": [
+      {
+        "id": "prod-4-dest-1",
+        "name": "Lokal",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DDMMYY VARIAN hh:mm A PSR",
+        "flavor_options": [
+          {
+            "id": "chocolate",
+            "name": "Chocolate",
+            "code": "CHOCOLATE",
+            "source_destination": "All"
+          },
+          {
+            "id": "hazelnut",
+            "name": "Hazelnut",
+            "code": "HAZELNUT",
+            "source_destination": "All"
+          },
+          {
+            "id": "marie-biscuits",
+            "name": "Marie Biscuits",
+            "code": "MARIE BISCUITS",
+            "source_destination": "All"
+          },
+          {
+            "id": "matcha",
+            "name": "Matcha",
+            "code": "MATCHA",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-4-dest-2",
+        "name": "Ekspor Vietnam",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DDMMYY VARIAN hh:mm A PSR VN",
+        "flavor_options": [
+          {
+            "id": "chocolate",
+            "name": "Chocolate",
+            "code": "CHOCOLATE",
+            "source_destination": "All"
+          },
+          {
+            "id": "hazelnut",
+            "name": "Hazelnut",
+            "code": "HAZELNUT",
+            "source_destination": "All"
+          },
+          {
+            "id": "marie-biscuits",
+            "name": "Marie Biscuits",
+            "code": "MARIE BISCUITS",
+            "source_destination": "All"
+          },
+          {
+            "id": "matcha",
+            "name": "Matcha",
+            "code": "MATCHA",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-4-dest-3",
+        "name": "Ekspor Hongkong",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DDMMYY VARIAN hh:mm A PSR HK",
+        "flavor_options": [
+          {
+            "id": "chocolate",
+            "name": "Chocolate",
+            "code": "CHOCOLATE",
+            "source_destination": "All"
+          },
+          {
+            "id": "hazelnut",
+            "name": "Hazelnut",
+            "code": "HAZELNUT",
+            "source_destination": "All"
+          },
+          {
+            "id": "marie-biscuits",
+            "name": "Marie Biscuits",
+            "code": "MARIE BISCUITS",
+            "source_destination": "All"
+          },
+          {
+            "id": "matcha",
+            "name": "Matcha",
+            "code": "MATCHA",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-4-dest-4",
+        "name": "Ekspor Maldives",
+        "source_variant": "All",
+        "coding_template": "PR : DDMMYYYY\nEX : DDMMYYYY\n9AA hh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DDMMYYYY VARIAN hh:mm A PSR MV",
+        "flavor_options": [
+          {
+            "id": "chocolate",
+            "name": "Chocolate",
+            "code": "CHOCOLATE",
+            "source_destination": "All"
+          },
+          {
+            "id": "hazelnut",
+            "name": "Hazelnut",
+            "code": "HAZELNUT",
+            "source_destination": "All"
+          },
+          {
+            "id": "marie-biscuits",
+            "name": "Marie Biscuits",
+            "code": "MARIE BISCUITS",
+            "source_destination": "All"
+          },
+          {
+            "id": "matcha",
+            "name": "Matcha",
+            "code": "MATCHA",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-4-dest-5",
+        "name": "Ekspor Brunei",
+        "source_variant": "All",
+        "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DD MM YY VARIAN hh:mm A PSR BN",
+        "flavor_options": [
+          {
+            "id": "chocolate",
+            "name": "Chocolate",
+            "code": "CHOCOLATE",
+            "source_destination": "All"
+          },
+          {
+            "id": "hazelnut",
+            "name": "Hazelnut",
+            "code": "HAZELNUT",
+            "source_destination": "All"
+          },
+          {
+            "id": "marie-biscuits",
+            "name": "Marie Biscuits",
+            "code": "MARIE BISCUITS",
+            "source_destination": "All"
+          },
+          {
+            "id": "matcha",
+            "name": "Matcha",
+            "code": "MATCHA",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-4-dest-6",
+        "name": "Ekspor Cambodia",
+        "source_variant": "All",
+        "coding_template": "PR : DD MM YY\nEX : DD MM YY\n9AA hh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DD MM YY VARIAN hh:mm A PSR CB",
+        "flavor_options": [
+          {
+            "id": "chocolate",
+            "name": "Chocolate",
+            "code": "CHOCOLATE",
+            "source_destination": "All"
+          },
+          {
+            "id": "hazelnut",
+            "name": "Hazelnut",
+            "code": "HAZELNUT",
+            "source_destination": "All"
+          },
+          {
+            "id": "marie-biscuits",
+            "name": "Marie Biscuits",
+            "code": "MARIE BISCUITS",
+            "source_destination": "All"
+          },
+          {
+            "id": "matcha",
+            "name": "Matcha",
+            "code": "MATCHA",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-4-dest-7",
+        "name": "Ekspor Somaliland",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DDMMYY VARIAN hh:mm A PSR SO",
+        "flavor_options": [
+          {
+            "id": "chocolate",
+            "name": "Chocolate",
+            "code": "CHOCOLATE",
+            "source_destination": "All"
+          },
+          {
+            "id": "hazelnut",
+            "name": "Hazelnut",
+            "code": "HAZELNUT",
+            "source_destination": "All"
+          },
+          {
+            "id": "marie-biscuits",
+            "name": "Marie Biscuits",
+            "code": "MARIE BISCUITS",
+            "source_destination": "All"
+          },
+          {
+            "id": "matcha",
+            "name": "Matcha",
+            "code": "MATCHA",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-4-dest-8",
+        "name": "Ekspor Malaysia",
+        "source_variant": "All",
+        "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
+        "shelf_life_days": 243,
+        "carton_template": "DD MM YY VARIAN hh:mm A PSR MY",
+        "flavor_options": [
+          {
+            "id": "chocolate",
+            "name": "Chocolate",
+            "code": "CHOCOLATE",
+            "source_destination": "All"
+          },
+          {
+            "id": "hazelnut",
+            "name": "Hazelnut",
+            "code": "HAZELNUT",
+            "source_destination": "All"
+          },
+          {
+            "id": "marie-biscuits",
+            "name": "Marie Biscuits",
+            "code": "MARIE BISCUITS",
+            "source_destination": "All"
+          },
+          {
+            "id": "matcha",
+            "name": "Matcha",
+            "code": "MATCHA",
+            "source_destination": "All"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod-5",
+    "plant": "PSR2",
+    "name": "SQ120",
+    "variants": [
+      {
+        "id": "prod-5-dest-1",
+        "name": "Lokal",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+        "shelf_life_days": 182,
+        "carton_template": "DDMMYY VARIAN 1234 A PSR",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-5-dest-2",
+        "name": "Ekspor Philippines",
+        "source_variant": "All",
+        "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n9AA hh:mm PSR",
+        "shelf_life_days": 274,
+        "carton_template": "DD MMM YY VARIAN 1234 A PSR",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-5-dest-3",
+        "name": "Ekspor Maldives",
+        "source_variant": "All",
+        "coding_template": "PR : DDMMYYYY\nEX : DDMMYYYY\n9AA hh:mm PSR",
+        "shelf_life_days": 274,
+        "carton_template": "DDMMYYYY VARIAN 1234 A PSR MV",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-5-dest-4",
+        "name": "Ekspor Timor Leste",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+        "shelf_life_days": 274,
+        "carton_template": "DDMMYY VARIAN 1234 A PSR TL",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-5-dest-5",
+        "name": "Ekspor Brunei",
+        "source_variant": "All",
+        "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
+        "shelf_life_days": 274,
+        "carton_template": "DD MM YY VARIAN 1234 A PSR BN",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-5-dest-6",
+        "name": "Ekspor Cambodia",
+        "source_variant": "All",
+        "coding_template": "PR : DD MM YY\nEX : DD MM YY\n9AA hh:mm PSR",
+        "shelf_life_days": 274,
+        "carton_template": "DD MM YY VARIAN 1234 A PSR CB",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-5-dest-7",
+        "name": "Ekspor Somaliland",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+        "shelf_life_days": 274,
+        "carton_template": "DDMMYY VARIAN 1234 A PSR SO",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-5-dest-8",
+        "name": "Ekspor Malaysia",
+        "source_variant": "All",
+        "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
+        "shelf_life_days": 274,
+        "carton_template": "DD MM YY VARIAN 1234 A PSR MY",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prod-6",
+    "plant": "PSR2",
+    "name": "FRUTAS",
+    "variants": [
+      {
+        "id": "prod-6-dest-1",
+        "name": "Lokal",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+        "shelf_life_days": 182,
+        "carton_template": "DDMMYY VARIAN 1234 A PSR",
+        "flavor_options": [
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "grape",
+            "name": "Grape",
+            "code": "GRAPE",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango",
+            "name": "Mango",
+            "code": "MANGO",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-6-dest-2",
+        "name": "Ekspor Philippines",
+        "source_variant": "All",
+        "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n7AA hh:mm PSR",
+        "shelf_life_days": 365,
+        "carton_template": "DD MMM YY VARIAN 1234 A PSR",
+        "flavor_options": [
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "grape",
+            "name": "Grape",
+            "code": "GRAPE",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango",
+            "name": "Mango",
+            "code": "MANGO",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-6-dest-3",
+        "name": "Ekspor Myanmar",
+        "source_variant": "All",
+        "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n7AA hh:mm PSR",
+        "shelf_life_days": 365,
+        "carton_template": "DD MMM YY VARIAN 1234 A PSR MM",
+        "flavor_options": [
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "grape",
+            "name": "Grape",
+            "code": "GRAPE",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango",
+            "name": "Mango",
+            "code": "MANGO",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-6-dest-4",
+        "name": "Ekspor Cambodia",
+        "source_variant": "All",
+        "coding_template": "PR : DD MM YY\nEX : DD MM YY\n7AA hh:mm PSR",
+        "shelf_life_days": 365,
+        "carton_template": "DD MM YY VARIAN 1234 A PSR CB",
+        "flavor_options": [
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "grape",
+            "name": "Grape",
+            "code": "GRAPE",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango",
+            "name": "Mango",
+            "code": "MANGO",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-6-dest-5",
+        "name": "Ekspor Brunei",
+        "source_variant": "All",
+        "coding_template": "EX : DD MM YY\n7AA hh:mm PSR",
+        "shelf_life_days": 365,
+        "carton_template": "DD MM YY VARIAN 1234 A PSR BN",
+        "flavor_options": [
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "grape",
+            "name": "Grape",
+            "code": "GRAPE",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango",
+            "name": "Mango",
+            "code": "MANGO",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-6-dest-6",
+        "name": "Ekspor Malaysia",
+        "source_variant": "All",
+        "coding_template": "EX : DD MM YY\n7AA hh:mm PSR",
+        "shelf_life_days": 365,
+        "carton_template": "DD MM YY VARIAN 1234 A PSR MY",
+        "flavor_options": [
+          {
+            "id": "orange",
+            "name": "Orange",
+            "code": "ORANGE",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "grape",
+            "name": "Grape",
+            "code": "GRAPE",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango",
+            "name": "Mango",
+            "code": "MANGO",
+            "source_destination": "All"
+          }
+        ]
+      }
+    ]
+  }
+]

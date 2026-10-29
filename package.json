@@ -1,0 +1,12 @@
+{
+  "name": "qc-ed-format-checker",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pemeriksa format expired date statis untuk GitHub Pages",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test",
+    "import:data": "node scripts/import-csv.js"
+  }
+}

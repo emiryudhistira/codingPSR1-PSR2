@@ -1,0 +1,81 @@
+﻿Plant,Produk,Tujuan,Varian,Format Koding,Expired date
+PSR1,AMD 65,Lokal,All,"DDMMYY A61A
+hh:mm PSR",243
+PSR1,AMD 65,Ekspor Philippines,All,"PR : DD MMM YY
+EX : DD MMM YY
+A61A hh:mm PSR",243
+PSR1,AMD 65,Ekspor Maldives,All,"PR : DDMMYYYY
+EX : DDMMYYYY
+A61A hh:mm PSR",243
+PSR1,AMD 65,Ekspor China,All,"PR : YYYY MM DD
+EX : YYYY MM DD
+A61A hh:mm PSR",243
+PSR1,AMD 65,Ekspor Brunei,All,"EX : DD MM YY
+A61A hh:mm PSR",243
+PSR1,AMD 65,Ekspor Taiwan,All,"PR : DD MM YYYY
+EX : DD MM YYYY
+A61A hh:mm PSR",243
+PSR1,AMD 65,Ekspor Cambodia,All,"PR : DD MM YY
+EX : DD MM YY
+A61A hh:mm PSR",243
+PSR1,AMD 65,Ekspor Somaliland,All,"DDMMYY A61A
+hh:mm PSR",243
+PSR1,MM80,Ekspor Philippines,All,"PR : DD MMM YY
+EX : DD MMM YY
+A51A hh:mm PSR",274
+PSR2,SP40,Lokal,All,"DDMMYY 1AA
+hh:mm 1PSR",182
+PSR2,EM80,Lokal,All,"DDMMYY 7AA
+hh:mm PSR",243
+PSR2,EM80,Ekspor Vietnam,All,"DDMMYY 7AA
+hh:mm PSR",243
+PSR2,EM80,Ekspor Hongkong,All,"DDMMYY 7AA
+hh:mm PSR",243
+PSR2,EM80,Ekspor Maldives,All,"PR : DDMMYYYY
+EX : DDMMYYYY
+9AA hh:mm PSR",243
+PSR2,EM80,Ekspor Brunei,All,"EX : DD MM YY
+9AA hh:mm PSR",243
+PSR2,EM80,Ekspor Cambodia,All,"PR : DD MM YY
+EX : DD MM YY
+9AA hh:mm PSR",243
+PSR2,EM80,Ekspor Somaliland,All,"DDMMYY 7AA
+hh:mm PSR",243
+PSR2,EM80,Ekspor Malaysia,All,"EX : DD MM YY
+9AA hh:mm PSR",243
+PSR2,EM80,Ekspor Somaliland,All,"DDMMYY 7AA
+hh:mm PSR",243
+PSR2,SQ120,Lokal,All,"DDMMYY 7AA
+hh:mm PSR",182
+PSR2,SQ120,Ekspor Philippines,All,"PR : DD MMM YY
+EX : DD MMM YY
+9AA hh:mm PSR",274
+PSR2,SQ120,Ekspor Maldives,All,"PR : DDMMYYYY
+EX : DDMMYYYY
+9AA hh:mm PSR",274
+PSR2,SQ120,Ekspor Timor Leste,All,"DDMMYY 7AA
+hh:mm PSR",274
+PSR2,SQ120,Ekspor Brunei,All,"EX : DD MM YY
+9AA hh:mm PSR",274
+PSR2,SQ120,Ekspor Cambodia,All,"PR : DD MM YY
+EX : DD MM YY
+9AA hh:mm PSR",274
+PSR2,SQ120,Ekspor Somaliland,All,"DDMMYY 7AA
+hh:mm PSR",274
+PSR2,SQ120,Ekspor Malaysia,All,"EX : DD MM YY
+9AA hh:mm PSR",274
+PSR2,FRUTAS,Lokal,All,"DDMMYY 7AA
+hh:mm PSR",182
+PSR2,FRUTAS,Ekspor Philippines,All,"PR : DD MMM YY
+EX : DD MMM YY
+7AA hh:mm PSR",365
+PSR2,FRUTAS,Ekspor Myanmar,All,"PR : DD MMM YY
+EX : DD MMM YY
+7AA hh:mm PSR",365
+PSR2,FRUTAS,Ekspor Cambodia,All,"PR : DD MM YY
+EX : DD MM YY
+7AA hh:mm PSR",365
+PSR2,FRUTAS,Ekspor Brunei,All,"EX : DD MM YY
+7AA hh:mm PSR",365
+PSR2,FRUTAS,Ekspor Malaysia,All,"EX : DD MM YY
+7AA hh:mm PSR",365

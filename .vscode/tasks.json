@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Preview QC Coding",
+      "type": "shell",
+      "command": "node",
+      "args": ["scripts/serve.js"],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Test QC Coding",
+      "type": "shell",
+      "command": "node",
+      "args": ["--test"],
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

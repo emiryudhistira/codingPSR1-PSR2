@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#253782">
+  <meta name="description" content="Pilih lokasi pabrik untuk memeriksa format coding produksi dan expired date.">
+  <title>QC Coding — Pilih Plant</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./landing.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./" aria-label="Coding Format beranda"><img class="brand-logo" src="./logo-qc.png" alt=""><span>Coding Format<span class="brand-divider"></span><small>QUALITY ASSURANCE</small></span></a><div class="header-right"><span class="internal-tag">INTERNAL TOOL</span><span class="system-status"><i></i> Sistem aktif</span></div></header>
+  <main class="workspace plant-workspace">
+    <div class="breadcrumb-line"><span>Workspace</span><span>/</span><strong>Pilih plant</strong></div>
+    <section class="intro"><div><div class="eyebrow">PRODUCTION TOOLS <span>QC</span></div><h1>Format Koding<br><span>PSR 1 - PSR 2</span></h1></div></section>
+    <section aria-labelledby="plants-title"><div class="plant-section-heading"><h2 id="plants-title">Lokasi pabrik</h2><span id="plant-count" class="small-label">MEMUAT MASTER DATA…</span></div><div id="plant-list" class="plant-list" aria-live="polite"><p>Memuat daftar plant…</p></div></section>
+    <div id="data-error" class="data-error" role="alert" hidden><strong>Master data tidak dapat dimuat.</strong><p>Periksa koneksi dan master data, lalu coba kembali.</p><button type="button" id="retry">Coba lagi</button></div>
+    <aside class="notice"><span class="notice-icon" aria-hidden="true">ⓘ</span><div><strong>Master coding berdasarkan lokasi</strong><p>Setelah memilih plant, pilih produk dan tujuan distribusi. Tanggal produksi dan kedaluwarsa dihitung otomatis dari tanggal perangkat.</p></div></aside>
+    <footer><span><strong>QC Coding</strong> <span class="footer-dot">·</span> Ketelitian di setiap kemasan.</span><span class="demo-tag">Master data: Format.csv</span><span>ED Format Checker <span class="version">v1.1</span></span></footer>
+  </main>
+</body>
+</html>
