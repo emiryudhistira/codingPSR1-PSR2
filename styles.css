@@ -56,3 +56,12 @@ dialog::backdrop{background:#101a38d0}
 .result-panels{display:grid;gap:23px;min-width:0}.result-panels .result-card{min-width:0}.carton-output{display:block;font-family:'Space Mono',monospace;font-size:clamp(17px,1.8vw,25px);line-height:1.7;font-weight:700;letter-spacing:-.4px;color:#bcff87;text-shadow:0 0 18px #a8ff6026;white-space:pre-wrap;overflow-wrap:anywhere}.output-product{font-size:9px;color:#a6b7d9}.carton-metadata{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:19px 0}.carton-metadata span{display:block;font-size:9px;color:#68758e;margin-bottom:7px}.carton-metadata strong{font-size:12px;color:#273b65;font-weight:600}.carton-metadata p{margin:0;color:#68758e;font-size:10px;text-align:right}.carton-card .result-heading{flex-wrap:wrap}.carton-card .result-bottom>span{line-height:1.6}
 @media(max-width:760px){.result-panels{gap:20px}.carton-output{font-size:clamp(16px,4.7vw,25px)}}
 .carton-output{white-space:pre;overflow-wrap:normal;overflow:hidden;max-width:100%;padding-bottom:8px}
+
+/* Jaga susunan panel tetap ringkas untuk koding dua atau tiga baris. */
+.result-panels{gap:18px}
+.result-panels .result-heading{margin-bottom:15px}
+.result-panels .inkjet{min-height:180px}
+.result-panels .empty-preview{height:126px}
+.result-panels .filled-preview{min-height:136px;padding:12px 0;gap:8px}
+.result-panels #coding-output{line-height:1.25}
+.result-panels .metadata{padding:16px 0}
