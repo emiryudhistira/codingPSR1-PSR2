@@ -39,14 +39,12 @@
       </section>
       <div class="result-panels">
       <section class="result-card" aria-labelledby="result-title">
-        <div class="result-heading"><div><h2 id="result-title">Format koding kemasan primer</h2></div><span id="result-status" class="result-status">Menunggu pilihan</span></div>
+        <div class="result-heading"><h2 id="result-title">Format koding kemasan primer</h2><div class="result-heading-actions"><span id="result-status" class="result-status">Menunggu pilihan</span><button class="copy-button" id="copy" type="button" disabled>Salin primer</button></div></div>
         <div class="inkjet" id="inkjet" aria-live="polite" aria-atomic="true"><div class="terminal-top"><span><i></i> CODING OUTPUT</span><span id="format-label">—</span></div><div id="empty-preview" class="empty-preview"><span class="scan-icon" aria-hidden="true">[ <span>−</span> ]</span><strong>Siap untuk verifikasi</strong><p>Pilih produk dan tujuan untuk melihat format coding.</p></div><div id="filled-preview" class="filled-preview" hidden><span class="output-caption">PACKAGING CODE</span><output id="coding-output"></output><span id="output-product"></span></div><div class="terminal-bottom"><span>● ● ●</span><span>INKJET PREVIEW / 1:1 TEXT</span></div></div>
         <details id="master-details" class="master-details" hidden><summary>Lihat pola master coding</summary><pre id="master-template"></pre><p>PR = tanggal produksi · EX / tanggal tanpa awalan = ED · hh:mm = jam produksi perangkat</p></details>
-        <div class="metadata"><div><span>Tanggal produksi</span><strong id="production-date">—</strong></div><div><span>Umur simpan</span><strong id="shelf-life">— <small>hari</small></strong></div><div><span>Tanggal kedaluwarsa</span><strong id="expiry-date">—</strong></div></div>
-        <div class="result-bottom"><span id="result-note"><span aria-hidden="true">ⓘ</span> Lengkapi pilihan untuk melihat hasil.</span><button class="copy-button" id="copy" type="button" disabled><span aria-hidden="true">▣</span> Salin coding</button></div>
       </section>
       <section class="result-card carton-card" aria-labelledby="carton-title">
-        <div class="result-heading"><div><h2 id="carton-title">Format koding karton</h2></div><span id="carton-status" class="result-status">Menunggu pilihan</span></div>
+        <div class="result-heading"><h2 id="carton-title">Format koding karton</h2><div class="result-heading-actions"><span id="carton-status" class="result-status">Menunggu pilihan</span><button class="copy-button" id="copy-carton" type="button" disabled>Salin karton</button></div></div>
         <div class="inkjet" id="carton-inkjet" aria-live="polite" aria-atomic="true">
           <div class="terminal-top"><span><i></i> CARTON OUTPUT</span><span id="carton-format-label">—</span></div>
           <div id="carton-empty" class="empty-preview"><span class="scan-icon" aria-hidden="true">[ − ]</span><strong id="carton-empty-title">Siap untuk verifikasi</strong><p id="carton-empty-note">Pilih produk, tujuan, dan varian untuk melihat koding karton.</p></div>
@@ -54,8 +52,11 @@
           <div class="terminal-bottom"><span>● ● ●</span><span>CARTON / 1:1 TEXT</span></div>
         </div>
         <details id="carton-master-details" class="master-details" hidden><summary>Lihat pola master karton</summary><pre id="carton-master-template"></pre><p>VARIAN mengikuti kode varian untuk produk dan tujuan yang dipilih.</p></details>
-        <div class="carton-metadata"><div><span>Tanggal kedaluwarsa</span><strong id="carton-expiry">—</strong></div><p>Mengikuti kemasan primer</p></div>
-        <div class="result-bottom"><span id="carton-note">Lengkapi pilihan untuk melihat hasil.</span><button class="copy-button" id="copy-carton" type="button" disabled>Salin koding karton</button></div>
+      </section>
+      <section class="result-card summary-card" aria-labelledby="summary-title">
+        <h2 id="summary-title">Ringkasan tanggal</h2>
+        <div class="metadata"><div><span>Tanggal produksi</span><strong id="production-date">—</strong></div><div><span>Umur simpan</span><strong id="shelf-life">— <small>hari</small></strong></div><div><span>Tanggal kedaluwarsa</span><strong id="expiry-date">—</strong></div></div>
+        <p class="summary-note">Tanggal kedaluwarsa berlaku untuk kemasan primer dan karton.</p>
       </section>
       </div>
     </div>

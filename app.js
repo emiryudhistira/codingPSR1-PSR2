@@ -65,8 +65,6 @@ function renderCarton(today, product, destination) {
   $('carton-status').textContent = ready ? 'Hasil tersedia' : destination ? !template ? 'Belum tersedia' : 'Pilih varian' : 'Menunggu pilihan';
   $('carton-empty-title').textContent = destination ? !template ? 'Format karton belum tersedia' : 'Pilih varian produk' : 'Siap untuk verifikasi';
   $('carton-empty-note').textContent = destination ? !template ? 'Belum ada master karton untuk produk dan tujuan ini.' : destination.flavor_options?.length ? 'Pilih varian untuk menampilkan tulisan karton yang sesuai.' : 'Master varian belum tersedia untuk produk dan tujuan ini.' : 'Pilih produk, tujuan, dan varian untuk melihat koding karton.';
-  $('carton-expiry').textContent = destination ? dateLabel.format(addCalendarDays(today, destination.shelf_life_days)) : '—';
-  $('carton-note').textContent = ready ? 'ED sama dengan kemasan primer.' : destination && template ? 'Lengkapi pilihan varian untuk koding karton.' : 'Lengkapi pilihan untuk melihat hasil.';
   $('carton-format-label').textContent = ready ? `${template.split('\n').length} BARIS` : '—';
   $('carton-output').textContent = '';
   $('carton-product').textContent = '';
@@ -93,7 +91,6 @@ function render() {
   $('result-status').textContent = variant ? '● Hasil tersedia' : 'Menunggu pilihan';
   $('result-status').classList.toggle('ready', Boolean(variant));
   $('production-date').textContent = variant ? dateLabel.format(today) : '—';
-  $('result-note').textContent = variant ? '✓ Perhitungan tanggal selesai' : 'ⓘ Lengkapi pilihan untuk melihat hasil.';
   currentCoding = '';
   if (!variant) {
     $('format-label').textContent = '—';

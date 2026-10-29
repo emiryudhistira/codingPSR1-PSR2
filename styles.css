@@ -70,3 +70,14 @@ dialog::backdrop{background:#101a38d0}
 .tool-grid{grid-template-columns:minmax(0,1fr);max-width:900px;margin-inline:auto}
 .checker-intro{max-width:900px;margin-inline:auto}
 .checker-intro .today-card{width:100%;min-width:0}
+
+/* Dekatkan hasil primer dan karton; ringkasan tanggal berada setelah keduanya. */
+.result-panels{gap:12px}
+.result-panels .result-card{padding-bottom:16px}
+.result-heading{flex-wrap:wrap}
+.result-heading-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.result-panels .master-details{border-bottom:0;padding-bottom:0}
+.summary-card h2{margin:0}
+.summary-card .metadata{padding:16px 0 10px}
+.summary-note{margin:0;color:#68758e;font-size:10px;line-height:1.5}
+@media(max-width:400px){.result-heading-actions{margin-left:0}.result-heading h2{width:100%}.summary-card .metadata{gap:7px}.summary-card .metadata span{line-height:1.4}}
