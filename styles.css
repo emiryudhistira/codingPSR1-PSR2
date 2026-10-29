@@ -69,3 +69,4 @@ dialog::backdrop{background:#101a38d0}
 /* Pertahankan susunan vertikal pada layar desktop dan ponsel. */
 .tool-grid{grid-template-columns:minmax(0,1fr);max-width:900px;margin-inline:auto}
 .checker-intro{max-width:900px;margin-inline:auto}
+.checker-intro .today-card{width:100%;min-width:0}
