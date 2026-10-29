@@ -65,3 +65,7 @@ dialog::backdrop{background:#101a38d0}
 .result-panels .filled-preview{min-height:136px;padding:12px 0;gap:8px}
 .result-panels #coding-output{line-height:1.25}
 .result-panels .metadata{padding:16px 0}
+
+/* Pertahankan susunan vertikal pada layar desktop dan ponsel. */
+.tool-grid{grid-template-columns:minmax(0,1fr);max-width:900px;margin-inline:auto}
+.checker-intro{max-width:900px;margin-inline:auto}
