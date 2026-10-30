@@ -40,7 +40,18 @@ export function importProducts(text) {
     const template = rawTemplate.replace(/\r\n?/g, '\n');
     let product = products.find((p) => p.plant === plant && p.name === name);
     if (!product) { product = { id: `prod-${products.length + 1}`, plant, name, variants: [] }; products.push(product); }
-    const existing = product.variants.find((v) => v.name === destination);
+    let existing = product.variants.find((v) => v.name === destination);
+    if (variant.toLowerCase() !== 'all') {
+      if (!existing) throw new Error(`Aturan umum harus mendahului varian: ${name} / ${destination}`);
+      existing.flavor_rules ||= [];
+      const rule = existing.flavor_rules.find((r) => r.name.toLowerCase() === variant.toLowerCase());
+      if (rule) {
+        if (rule.coding_template !== template || rule.shelf_life_days !== Number(days)) throw new Error(`Format varian berbeda: ${name} / ${destination} / ${variant}`);
+        duplicates++; return;
+      }
+      existing.flavor_rules.push({ name: variant, coding_template: template, shelf_life_days: Number(days) });
+      return;
+    }
     if (existing) {
       if (existing.coding_template !== template || existing.shelf_life_days !== Number(days)) throw new Error(`Format berbeda untuk ${plant} / ${name} / ${destination}; perlu penentuan varian.`);
       duplicates++; return;
@@ -97,6 +108,9 @@ export function importDatabase(primaryCSV, cartonCSV, flavorCSV) {
         }
       }
       destination.flavor_options = [...byName.values()];
+      for (const rule of destination.flavor_rules || []) {
+        if (!destination.flavor_options.some((flavor) => flavor.name.toLowerCase() === rule.name.toLowerCase())) throw new Error(`Varian primer tidak tersedia: ${product.name} / ${destination.name} / ${rule.name}`);
+      }
       if (!destination.carton_template) warnings.push(`Primer tanpa karton: ${product.plant} / ${product.name} / ${destination.name}`);
       if (destination.carton_template?.includes('VARIAN') && !destination.flavor_options.length) warnings.push(`Varian belum tersedia: ${product.name} / ${destination.name}`);
     }

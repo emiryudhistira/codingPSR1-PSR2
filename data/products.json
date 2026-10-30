@@ -389,6 +389,13 @@
         "source_variant": "All",
         "coding_template": "DDMMYY 7AA\nhh:mm PSR",
         "shelf_life_days": 243,
+        "flavor_rules": [
+          {
+            "name": "Matcha",
+            "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+            "shelf_life_days": 182
+          }
+        ],
         "carton_template": "DDMMYY VARIAN hh:mm A PSR",
         "flavor_options": [
           {
@@ -423,6 +430,13 @@
         "source_variant": "All",
         "coding_template": "DDMMYY 7AA\nhh:mm PSR",
         "shelf_life_days": 243,
+        "flavor_rules": [
+          {
+            "name": "Matcha",
+            "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+            "shelf_life_days": 182
+          }
+        ],
         "carton_template": "DDMMYY VARIAN hh:mm A PSR VN",
         "flavor_options": [
           {
@@ -457,6 +471,13 @@
         "source_variant": "All",
         "coding_template": "DDMMYY 7AA\nhh:mm PSR",
         "shelf_life_days": 243,
+        "flavor_rules": [
+          {
+            "name": "Matcha",
+            "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+            "shelf_life_days": 182
+          }
+        ],
         "carton_template": "DDMMYY VARIAN hh:mm A PSR HK",
         "flavor_options": [
           {
@@ -491,6 +512,13 @@
         "source_variant": "All",
         "coding_template": "PR : DDMMYYYY\nEX : DDMMYYYY\n9AA hh:mm PSR",
         "shelf_life_days": 243,
+        "flavor_rules": [
+          {
+            "name": "Matcha",
+            "coding_template": "PR : DDMMYYYY\nEX : DDMMYYYY\n9AA hh:mm PSR",
+            "shelf_life_days": 182
+          }
+        ],
         "carton_template": "DDMMYYYY VARIAN hh:mm A PSR MV",
         "flavor_options": [
           {
@@ -525,6 +553,13 @@
         "source_variant": "All",
         "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
         "shelf_life_days": 243,
+        "flavor_rules": [
+          {
+            "name": "Matcha",
+            "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
+            "shelf_life_days": 182
+          }
+        ],
         "carton_template": "DD MM YY VARIAN hh:mm A PSR BN",
         "flavor_options": [
           {
@@ -559,6 +594,13 @@
         "source_variant": "All",
         "coding_template": "PR : DD MM YY\nEX : DD MM YY\n9AA hh:mm PSR",
         "shelf_life_days": 243,
+        "flavor_rules": [
+          {
+            "name": "Matcha",
+            "coding_template": "PR : DD MM YY\nEX : DD MM YY\n9AA hh:mm PSR",
+            "shelf_life_days": 182
+          }
+        ],
         "carton_template": "DD MM YY VARIAN hh:mm A PSR CB",
         "flavor_options": [
           {
@@ -593,6 +635,13 @@
         "source_variant": "All",
         "coding_template": "DDMMYY 7AA\nhh:mm PSR",
         "shelf_life_days": 243,
+        "flavor_rules": [
+          {
+            "name": "Matcha",
+            "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+            "shelf_life_days": 182
+          }
+        ],
         "carton_template": "DDMMYY VARIAN hh:mm A PSR SO",
         "flavor_options": [
           {
@@ -627,6 +676,13 @@
         "source_variant": "All",
         "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
         "shelf_life_days": 243,
+        "flavor_rules": [
+          {
+            "name": "Matcha",
+            "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
+            "shelf_life_days": 182
+          }
+        ],
         "carton_template": "DD MM YY VARIAN hh:mm A PSR MY",
         "flavor_options": [
           {
@@ -1043,7 +1099,7 @@
         "source_variant": "All",
         "coding_template": "DDMMYY 7AA\nhh:mm PSR",
         "shelf_life_days": 182,
-        "carton_template": "DDMMYY VARIAN 1234 A PSR",
+        "carton_template": "DDMMYY VARIAN hh:mm A PSR",
         "flavor_options": [
           {
             "id": "orange",
@@ -1083,7 +1139,7 @@
         "source_variant": "All",
         "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n7AA hh:mm PSR",
         "shelf_life_days": 365,
-        "carton_template": "DD MMM YY VARIAN 1234 A PSR",
+        "carton_template": "DD MMM YY VARIAN hh:mm A PSR",
         "flavor_options": [
           {
             "id": "orange",
@@ -1123,7 +1179,7 @@
         "source_variant": "All",
         "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n7AA hh:mm PSR",
         "shelf_life_days": 365,
-        "carton_template": "DD MMM YY VARIAN 1234 A PSR MM",
+        "carton_template": "DD MMM YY VARIAN hh:mm A PSR MM",
         "flavor_options": [
           {
             "id": "orange",
@@ -1163,7 +1219,7 @@
         "source_variant": "All",
         "coding_template": "PR : DD MM YY\nEX : DD MM YY\n7AA hh:mm PSR",
         "shelf_life_days": 365,
-        "carton_template": "DD MM YY VARIAN 1234 A PSR CB",
+        "carton_template": "DD MM YY VARIAN hh:mm A PSR CB",
         "flavor_options": [
           {
             "id": "orange",
@@ -1203,7 +1259,7 @@
         "source_variant": "All",
         "coding_template": "EX : DD MM YY\n7AA hh:mm PSR",
         "shelf_life_days": 365,
-        "carton_template": "DD MM YY VARIAN 1234 A PSR BN",
+        "carton_template": "DD MM YY VARIAN hh:mm A PSR BN",
         "flavor_options": [
           {
             "id": "orange",
@@ -1243,7 +1299,7 @@
         "source_variant": "All",
         "coding_template": "EX : DD MM YY\n7AA hh:mm PSR",
         "shelf_life_days": 365,
-        "carton_template": "DD MM YY VARIAN 1234 A PSR MY",
+        "carton_template": "DD MM YY VARIAN hh:mm A PSR MY",
         "flavor_options": [
           {
             "id": "orange",

@@ -45,6 +45,26 @@ PSR2,EM80,Ekspor Malaysia,All,"EX : DD MM YY
 9AA hh:mm PSR",243
 PSR2,EM80,Ekspor Somaliland,All,"DDMMYY 7AA
 hh:mm PSR",243
+PSR2,EM80,Lokal,Matcha,"DDMMYY 7AA
+hh:mm PSR",182
+PSR2,EM80,Ekspor Vietnam,Matcha,"DDMMYY 7AA
+hh:mm PSR",182
+PSR2,EM80,Ekspor Hongkong,Matcha,"DDMMYY 7AA
+hh:mm PSR",182
+PSR2,EM80,Ekspor Maldives,Matcha,"PR : DDMMYYYY
+EX : DDMMYYYY
+9AA hh:mm PSR",182
+PSR2,EM80,Ekspor Brunei,Matcha,"EX : DD MM YY
+9AA hh:mm PSR",182
+PSR2,EM80,Ekspor Cambodia,Matcha,"PR : DD MM YY
+EX : DD MM YY
+9AA hh:mm PSR",182
+PSR2,EM80,Ekspor Somaliland,Matcha,"DDMMYY 7AA
+hh:mm PSR",182
+PSR2,EM80,Ekspor Malaysia,Matcha,"EX : DD MM YY
+9AA hh:mm PSR",182
+PSR2,EM80,Ekspor Somaliland,Matcha,"DDMMYY 7AA
+hh:mm PSR",182
 PSR2,SQ120,Lokal,All,"DDMMYY 7AA
 hh:mm PSR",182
 PSR2,SQ120,Ekspor Philippines,All,"PR : DD MMM YY

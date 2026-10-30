@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { addCalendarDays, formatCoding, renderPackaging, validateProducts } from '../date-engine.js';
+import { addCalendarDays, formatCoding, renderPackaging, resolveFlavorRule, validateProducts } from '../date-engine.js';
 import { importProducts, importDatabase, parseCSV } from '../scripts/import-csv.js';
 
 test('180 hari dari Oktober melewati batas tahun dengan benar', () => {
@@ -48,8 +48,8 @@ test('impor seluruh CSV sama dengan master JSON dan menggabungkan hanya duplikat
   const result = importDatabase(...files);
   const json = JSON.parse(await readFile(new URL('../data/products.json', import.meta.url)));
   assert.deepEqual(result.products, json);
-  assert.equal(result.sourceRows, 33);
-  assert.equal(result.duplicates, 1);
+  assert.equal(result.sourceRows, 42);
+  assert.equal(result.duplicates, 2);
   assert.equal(result.products.length, 6);
   assert.equal(result.products.reduce((n, p) => n + p.variants.length, 0), 32);
   assert.equal(result.cartonRows, 32);
@@ -97,6 +97,25 @@ test('EM80 Vietnam memiliki primer dan karton dengan ED yang sama', async () => 
   assert.equal(renderPackaging(vietnam.carton_template, today, vietnam.shelf_life_days, vietnam.flavor_options.find((f) => f.name === 'Chocolate').code), '280627 CHOCOLATE 08:05 A PSR VN');
 });
 
+test('semua tujuan EM80 memakai umur simpan sesuai varian untuk primer dan karton', async () => {
+  const data = JSON.parse(await readFile(new URL('../data/products.json', import.meta.url)));
+  const em80 = data.find((p) => p.name === 'EM80');
+  const today = new Date(2026, 9, 28, 8, 5);
+  for (const destination of em80.variants) {
+    for (const flavor of destination.flavor_options) {
+      const rule = resolveFlavorRule(destination, flavor);
+      assert.equal(rule.shelf_life_days, flavor.name === 'Matcha' ? 182 : 243);
+      const carton = renderPackaging(destination.carton_template, today, rule.shelf_life_days, flavor.code);
+      assert.ok(carton.includes('08:05'));
+    }
+  }
+  const local = em80.variants.find((d) => d.name === 'Lokal');
+  const matcha = local.flavor_options.find((f) => f.name === 'Matcha');
+  const rule = resolveFlavorRule(local, matcha);
+  assert.equal(renderPackaging(rule.coding_template, today, rule.shelf_life_days), '280427 7AA\n08:05 PSR');
+  assert.equal(renderPackaging(local.carton_template, today, rule.shelf_life_days, matcha.code), '280427 MATCHA 08:05 A PSR');
+});
+
 test('ED karton FRUTAS mengikuti primer yang berbeda antara lokal dan ekspor', async () => {
   const data = JSON.parse(await readFile(new URL('../data/products.json', import.meta.url)));
   const frutas = data.find((p) => p.name === 'FRUTAS');
@@ -105,8 +124,8 @@ test('ED karton FRUTAS mengikuti primer yang berbeda antara lokal dan ekspor', a
   const today = new Date(2026, 9, 28, 8, 5);
   assert.equal(local.shelf_life_days, 182);
   assert.equal(exported.shelf_life_days, 365);
-  assert.equal(renderPackaging(local.carton_template, today, local.shelf_life_days, 'GRAPE'), '280427 GRAPE 1234 A PSR');
-  assert.equal(renderPackaging(exported.carton_template, today, exported.shelf_life_days, 'MANGO'), '28 OCT 27 MANGO 1234 A PSR MM');
+  assert.equal(renderPackaging(local.carton_template, today, local.shelf_life_days, 'GRAPE'), '280427 GRAPE 08:05 A PSR');
+  assert.equal(renderPackaging(exported.carton_template, today, exported.shelf_life_days, 'MANGO'), '28 OCT 27 MANGO 08:05 A PSR MM');
 });
 
 test('renderer mempertahankan susunan, literal, PR, EX, dan huruf besar/kecil token', () => {

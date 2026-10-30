@@ -53,6 +53,10 @@ export function renderPackaging(template, productionDate, shelfLifeDays, flavorC
   }).join('\n');
 }
 
+export function resolveFlavorRule(destination, flavor) {
+  return destination.flavor_rules?.find((rule) => rule.name.toLowerCase() === flavor?.name.toLowerCase()) || destination;
+}
+
 export function validateProducts(data) {
   if (!Array.isArray(data) || data.length === 0) throw new Error('Master produk kosong.');
   const ids = new Set();
@@ -64,6 +68,14 @@ export function validateProducts(data) {
       const validFormat = variant && (typeof variant.coding_template === 'string' && variant.coding_template.trim() || typeof variant.prefix === 'string' && SUPPORTED_FORMATS.includes(variant.date_format));
       if (!variant || typeof variant.id !== 'string' || !variant.id.trim() || variants.has(variant.id) || typeof variant.name !== 'string' || !variant.name.trim() || !Number.isSafeInteger(variant.shelf_life_days) || variant.shelf_life_days < 0 || !validFormat) throw new Error('Master varian tidak valid.');
       addCalendarDays(new Date(), variant.shelf_life_days);
+      if (variant.flavor_rules !== undefined) {
+        if (!Array.isArray(variant.flavor_rules)) throw new Error('Aturan varian primer tidak valid.');
+        const names = new Set();
+        for (const rule of variant.flavor_rules) {
+          if (!rule || typeof rule.name !== 'string' || !rule.name.trim() || names.has(rule.name.toLowerCase()) || typeof rule.coding_template !== 'string' || !rule.coding_template.trim() || !Number.isSafeInteger(rule.shelf_life_days) || rule.shelf_life_days < 0) throw new Error('Aturan varian primer tidak valid.');
+          names.add(rule.name.toLowerCase());
+        }
+      }
       if (variant.carton_template !== undefined && (typeof variant.carton_template !== 'string' || !variant.carton_template.trim())) throw new Error('Format karton tidak valid.');
       if (variant.flavor_options !== undefined) {
         if (!Array.isArray(variant.flavor_options)) throw new Error('Master varian karton tidak valid.');

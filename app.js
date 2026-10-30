@@ -1,4 +1,4 @@
-import { addCalendarDays, renderPackaging, validateProducts } from './date-engine.js';
+import { addCalendarDays, renderPackaging, resolveFlavorRule, validateProducts } from './date-engine.js';
 
 const $ = (id) => document.getElementById(id);
 const productSelect = $('product');
@@ -69,7 +69,7 @@ function renderCarton(today, product, destination) {
   $('carton-output').textContent = '';
   $('carton-product').textContent = '';
   if (!ready) return;
-  currentCartonCoding = renderPackaging(template, today, destination.shelf_life_days, flavor?.code);
+  currentCartonCoding = renderPackaging(template, today, resolveFlavorRule(destination, flavor).shelf_life_days, flavor?.code);
   $('carton-output').textContent = currentCartonCoding;
   $('carton-product').textContent = `${selectedPlant} / ${product.name} / ${destination.name}${flavor ? ' / ' + flavor.name : ''}`;
   fitCartonText();
@@ -81,18 +81,20 @@ function render() {
   $('today-label').textContent = fullDateLabel.format(today);
   const product = products.find((item) => item.id === productSelect.value);
   const variant = product?.variants.find((item) => item.id === variantSelect.value);
+  const flavor = variant?.flavor_options?.find((item) => item.id === flavorSelect.value);
+  const ready = Boolean(variant && (!variant.flavor_rules?.length || flavor));
   renderCarton(today, product, variant);
   $('reset').disabled = !product;
-  $('copy').disabled = !variant;
-  $('empty-preview').hidden = Boolean(variant);
-  $('filled-preview').hidden = !variant;
-  $('master-details').hidden = !variant;
-  $('inkjet').classList.toggle('has-result', Boolean(variant));
-  $('result-status').textContent = variant ? '● Hasil tersedia' : 'Menunggu pilihan';
-  $('result-status').classList.toggle('ready', Boolean(variant));
-  $('production-date').textContent = variant ? dateLabel.format(today) : '—';
+  $('copy').disabled = !ready;
+  $('empty-preview').hidden = ready;
+  $('filled-preview').hidden = !ready;
+  $('master-details').hidden = !ready;
+  $('inkjet').classList.toggle('has-result', ready);
+  $('result-status').textContent = ready ? '● Hasil tersedia' : variant ? 'Pilih varian' : 'Menunggu pilihan';
+  $('result-status').classList.toggle('ready', ready);
+  $('production-date').textContent = ready ? dateLabel.format(today) : '—';
   currentCoding = '';
-  if (!variant) {
+  if (!ready) {
     $('format-label').textContent = '—';
     $('shelf-life').textContent = '— hari';
     $('expiry-date').textContent = '—';
@@ -101,13 +103,14 @@ function render() {
     $('master-template').textContent = '';
     return;
   }
-  const expiry = addCalendarDays(today, variant.shelf_life_days);
-  currentCoding = renderPackaging(variant.coding_template, today, variant.shelf_life_days);
+  const rule = resolveFlavorRule(variant, flavor);
+  const expiry = addCalendarDays(today, rule.shelf_life_days);
+  currentCoding = renderPackaging(rule.coding_template, today, rule.shelf_life_days);
   $('coding-output').textContent = currentCoding;
   $('output-product').textContent = `${selectedPlant} / ${product.name} / ${variant.name}`;
   $('format-label').textContent = `${currentCoding.split('\n').length} BARIS`;
-  $('master-template').textContent = variant.coding_template;
-  $('shelf-life').textContent = `${variant.shelf_life_days} hari`;
+  $('master-template').textContent = rule.coding_template;
+  $('shelf-life').textContent = `${rule.shelf_life_days} hari`;
   $('expiry-date').textContent = dateLabel.format(expiry);
 }
 
