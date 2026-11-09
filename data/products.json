@@ -393,7 +393,7 @@
           {
             "name": "Matcha",
             "coding_template": "DDMMYY 7AA\nhh:mm PSR",
-            "shelf_life_days": 182
+            "shelf_life_days": 243
           }
         ],
         "carton_template": "DDMMYY VARIAN hh:mm A PSR",
@@ -434,7 +434,7 @@
           {
             "name": "Matcha",
             "coding_template": "DDMMYY 7AA\nhh:mm PSR",
-            "shelf_life_days": 182
+            "shelf_life_days": 243
           }
         ],
         "carton_template": "DDMMYY VARIAN hh:mm A PSR VN",
@@ -475,7 +475,7 @@
           {
             "name": "Matcha",
             "coding_template": "DDMMYY 7AA\nhh:mm PSR",
-            "shelf_life_days": 182
+            "shelf_life_days": 243
           }
         ],
         "carton_template": "DDMMYY VARIAN hh:mm A PSR HK",
@@ -516,7 +516,7 @@
           {
             "name": "Matcha",
             "coding_template": "PR : DDMMYYYY\nEX : DDMMYYYY\n9AA hh:mm PSR",
-            "shelf_life_days": 182
+            "shelf_life_days": 243
           }
         ],
         "carton_template": "DDMMYYYY VARIAN hh:mm A PSR MV",
@@ -557,7 +557,7 @@
           {
             "name": "Matcha",
             "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
-            "shelf_life_days": 182
+            "shelf_life_days": 243
           }
         ],
         "carton_template": "DD MM YY VARIAN hh:mm A PSR BN",
@@ -598,7 +598,7 @@
           {
             "name": "Matcha",
             "coding_template": "PR : DD MM YY\nEX : DD MM YY\n9AA hh:mm PSR",
-            "shelf_life_days": 182
+            "shelf_life_days": 243
           }
         ],
         "carton_template": "DD MM YY VARIAN hh:mm A PSR CB",
@@ -639,7 +639,7 @@
           {
             "name": "Matcha",
             "coding_template": "DDMMYY 7AA\nhh:mm PSR",
-            "shelf_life_days": 182
+            "shelf_life_days": 243
           }
         ],
         "carton_template": "DDMMYY VARIAN hh:mm A PSR SO",
@@ -680,7 +680,7 @@
           {
             "name": "Matcha",
             "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
-            "shelf_life_days": 182
+            "shelf_life_days": 243
           }
         ],
         "carton_template": "DD MM YY VARIAN hh:mm A PSR MY",

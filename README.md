@@ -29,7 +29,7 @@ Data terkini memiliki 42 baris primer, 32 baris karton, dan 19 baris aturan vari
 
 Nama produk di master varian dinormalisasi untuk perbedaan spasi, sehingga `AMD65` cocok dengan `AMD 65`. Daftar produk dipisahkan `;`. Aturan tujuan `All` berlaku umum; aturan tujuan spesifik menggantikannya untuk varian yang sama. Misalnya China memakai `BLU`, `ORI`, dan `STW`.
 
-**EM80** memerlukan pilihan varian untuk menampilkan primer dan karton: Matcha memiliki umur simpan 182 hari, varian lainnya 243 hari. Data varian Original umum sudah memakai AMD65 sehingga cocok dengan AMD 65; koding Original untuk China tetap `ORI`, sedangkan tujuan umum menggunakan `ORIGINAL`.
+**EM80** memerlukan pilihan varian untuk menampilkan primer dan karton. Semua varian, termasuk Matcha, memiliki umur simpan 243 hari. Data varian Original umum sudah memakai AMD65 sehingga cocok dengan AMD 65; koding Original untuk China tetap `ORI`, sedangkan tujuan umum menggunakan `ORIGINAL`.
 
 Setelah ketiga CSV diperbarui, jalankan:
 
