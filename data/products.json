@@ -770,7 +770,7 @@
         "source_variant": "All",
         "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n9AA hh:mm PSR",
         "shelf_life_days": 274,
-        "carton_template": "DD MMM YY VARIAN 1234 A PSR",
+        "carton_template": "DD MMM YY VARIAN 1234 A PSR PH",
         "flavor_options": [
           {
             "id": "blueberry",
