@@ -1139,7 +1139,7 @@
         "source_variant": "All",
         "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n7AA hh:mm PSR",
         "shelf_life_days": 365,
-        "carton_template": "DD MMM YY VARIAN hh:mm A PSR",
+        "carton_template": "DD MMM YY VARIAN hh:mm A PSR PH",
         "flavor_options": [
           {
             "id": "orange",
