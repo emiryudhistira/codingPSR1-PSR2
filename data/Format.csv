@@ -65,8 +65,15 @@ PSR2,EM80,Ekspor Malaysia,Matcha,"EX : DD MM YY
 9AA hh:mm PSR",243
 PSR2,EM80,Ekspor Somaliland,Matcha,"DDMMYY 7AA
 hh:mm PSR",243
+PSR2,EM80,Ekspor Philippines,Matcha,"PR : DD MMM YY
+EX : DD MMM YY
+9AA hh:mm PSR",243
 PSR2,SQ120,Lokal,All,"DDMMYY 7AA
 hh:mm PSR",182
+PSR2,SQ120,Ekspor Vietnam,All,"DDMMYY 7AA
+hh:mm PSR",274
+PSR2,SQ120,Ekspor UAE,All,"DDMMYY 7AA
+hh:mm PSR",274
 PSR2,SQ120,Ekspor Philippines,All,"PR : DD MMM YY
 EX : DD MMM YY
 9AA hh:mm PSR",274

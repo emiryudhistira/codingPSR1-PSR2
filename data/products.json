@@ -710,6 +710,29 @@
             "source_destination": "All"
           }
         ]
+      },
+      {
+        "id": "prod-4-dest-9",
+        "name": "Ekspor Philippines",
+        "source_variant": "Matcha",
+        "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n9AA hh:mm PSR",
+        "shelf_life_days": 243,
+        "flavor_rules": [
+          {
+            "name": "Matcha",
+            "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n9AA hh:mm PSR",
+            "shelf_life_days": 243
+          }
+        ],
+        "carton_template": "DD MMM YY VARIAN hh:mm A PSR PH",
+        "flavor_options": [
+          {
+            "id": "matcha",
+            "name": "Matcha",
+            "code": "MATCHA",
+            "source_destination": "All"
+          }
+        ]
       }
     ]
   },
@@ -766,6 +789,98 @@
       },
       {
         "id": "prod-5-dest-2",
+        "name": "Ekspor Vietnam",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+        "shelf_life_days": 274,
+        "carton_template": "DDMMYY VARIAN hh:mm A PSR VN",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-5-dest-3",
+        "name": "Ekspor UAE",
+        "source_variant": "All",
+        "coding_template": "DDMMYY 7AA\nhh:mm PSR",
+        "shelf_life_days": 274,
+        "carton_template": "DDMMYY VARIAN hh:mm A PSR AE",
+        "flavor_options": [
+          {
+            "id": "blueberry",
+            "name": "Blueberry",
+            "code": "BLUEBERRY",
+            "source_destination": "All"
+          },
+          {
+            "id": "brown-sugar",
+            "name": "Brown Sugar",
+            "code": "BROWN SUGAR",
+            "source_destination": "All"
+          },
+          {
+            "id": "mango-sticky-rice",
+            "name": "Mango Sticky Rice",
+            "code": "MANGO STICKY RICE",
+            "source_destination": "All"
+          },
+          {
+            "id": "original",
+            "name": "Original",
+            "code": "ORIGINAL",
+            "source_destination": "All"
+          },
+          {
+            "id": "peach",
+            "name": "Peach",
+            "code": "PEACH",
+            "source_destination": "All"
+          },
+          {
+            "id": "strawberry",
+            "name": "Strawberry",
+            "code": "STRAWBERRY",
+            "source_destination": "All"
+          }
+        ]
+      },
+      {
+        "id": "prod-5-dest-4",
         "name": "Ekspor Philippines",
         "source_variant": "All",
         "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n9AA hh:mm PSR",
@@ -811,7 +926,7 @@
         ]
       },
       {
-        "id": "prod-5-dest-3",
+        "id": "prod-5-dest-5",
         "name": "Ekspor Maldives",
         "source_variant": "All",
         "coding_template": "PR : DDMMYYYY\nEX : DDMMYYYY\n9AA hh:mm PSR",
@@ -857,7 +972,7 @@
         ]
       },
       {
-        "id": "prod-5-dest-4",
+        "id": "prod-5-dest-6",
         "name": "Ekspor Timor Leste",
         "source_variant": "All",
         "coding_template": "DDMMYY 7AA\nhh:mm PSR",
@@ -903,7 +1018,7 @@
         ]
       },
       {
-        "id": "prod-5-dest-5",
+        "id": "prod-5-dest-7",
         "name": "Ekspor Brunei",
         "source_variant": "All",
         "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",
@@ -949,7 +1064,7 @@
         ]
       },
       {
-        "id": "prod-5-dest-6",
+        "id": "prod-5-dest-8",
         "name": "Ekspor Cambodia",
         "source_variant": "All",
         "coding_template": "PR : DD MM YY\nEX : DD MM YY\n9AA hh:mm PSR",
@@ -995,7 +1110,7 @@
         ]
       },
       {
-        "id": "prod-5-dest-7",
+        "id": "prod-5-dest-9",
         "name": "Ekspor Somaliland",
         "source_variant": "All",
         "coding_template": "DDMMYY 7AA\nhh:mm PSR",
@@ -1041,7 +1156,7 @@
         ]
       },
       {
-        "id": "prod-5-dest-8",
+        "id": "prod-5-dest-10",
         "name": "Ekspor Malaysia",
         "source_variant": "All",
         "coding_template": "EX : DD MM YY\n9AA hh:mm PSR",

@@ -20,16 +20,18 @@ Tiga file sumber disimpan di proyek:
 - [Format Karton.csv](./data/Format%20Karton.csv): format karton, dicocokkan melalui plant, produk, dan tujuan.
 - [Format varian.csv](./data/Format%20varian.csv): nama varian dan teks cetak karton berdasarkan produk serta tujuan.
 
-Data terkini memiliki 42 baris primer, 32 baris karton, dan 19 baris aturan varian. Dua duplikat primer identik (EM80 Somaliland) digabungkan: hasilnya 6 produk dan 32 kombinasi produk–tujuan di dua plant, semuanya memiliki format karton dan pilihan varian.
+Data terkini memiliki 45 baris primer, 35 baris karton, dan 19 baris aturan varian. Dua duplikat primer identik (EM80 Somaliland) digabungkan: hasilnya 6 produk dan 35 kombinasi produk–tujuan di dua plant, semuanya memiliki format karton dan pilihan varian.
 
 | Plant | Produk | Kombinasi produk–tujuan |
 | --- | --- | --- |
 | PSR1 | AMD 65, MM80 | 9 |
-| PSR2 | SP40, EM80, SQ120, FRUTAS | 23 |
+| PSR2 | SP40, EM80, SQ120, FRUTAS | 26 |
 
 Nama produk di master varian dinormalisasi untuk perbedaan spasi, sehingga `AMD65` cocok dengan `AMD 65`. Daftar produk dipisahkan `;`. Aturan tujuan `All` berlaku umum; aturan tujuan spesifik menggantikannya untuk varian yang sama. Misalnya China memakai `BLU`, `ORI`, dan `STW`.
 
 **EM80** memerlukan pilihan varian untuk menampilkan primer dan karton. Semua varian, termasuk Matcha, memiliki umur simpan 243 hari. Data varian Original umum sudah memakai AMD65 sehingga cocok dengan AMD 65; koding Original untuk China tetap `ORI`, sedangkan tujuan umum menggunakan `ORIGINAL`.
+
+Tujuan **EM80 Ekspor Philippines** hanya tersedia untuk **Matcha**, mengikuti baris primer yang tersedia; kartonnya memakai akhiran `PH`. **SQ120 Ekspor Vietnam** dan **Ekspor UAE** memiliki umur simpan 274 hari dengan akhiran karton `VN` dan `AE`.
 
 Setelah ketiga CSV diperbarui, jalankan:
 
@@ -38,7 +40,7 @@ node scripts/import-csv.js
 node --test
 ```
 
-Importer menghasilkan [products.json](./data/products.json), yang digunakan kedua halaman, dan mencetak ketidaksesuaian data. Commit JSON dan semua CSV bersama; tes memastikan hasil impor sama dengan JSON yang dipublikasikan. Aturan primer khusus varian mengikuti baris `All` untuk tujuan yang sama. Format karton khusus kolom Varian selain `All` belum didukung.
+Importer menghasilkan [products.json](./data/products.json), yang digunakan kedua halaman, dan mencetak ketidaksesuaian data. Commit JSON dan semua CSV bersama; tes memastikan hasil impor sama dengan JSON yang dipublikasikan. Aturan primer khusus varian menggantikan baris `All` untuk tujuan yang sama, terlepas dari urutan baris. Jika tujuan hanya memiliki baris khusus varian, pilihan varian dibatasi pada baris primer tersebut. Format karton khusus kolom Varian selain `All` belum didukung.
 
 ## Aturan koding
 

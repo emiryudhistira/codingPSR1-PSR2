@@ -42,7 +42,10 @@ export function importProducts(text) {
     if (!product) { product = { id: `prod-${products.length + 1}`, plant, name, variants: [] }; products.push(product); }
     let existing = product.variants.find((v) => v.name === destination);
     if (variant.toLowerCase() !== 'all') {
-      if (!existing) throw new Error(`Aturan umum harus mendahului varian: ${name} / ${destination}`);
+      if (!existing) {
+        existing = { id: `${product.id}-dest-${product.variants.length + 1}`, name: destination, source_variant: variant, coding_template: template, shelf_life_days: Number(days) };
+        product.variants.push(existing);
+      }
       existing.flavor_rules ||= [];
       const rule = existing.flavor_rules.find((r) => r.name.toLowerCase() === variant.toLowerCase());
       if (rule) {
@@ -53,6 +56,10 @@ export function importProducts(text) {
       return;
     }
     if (existing) {
+      if (existing.source_variant.toLowerCase() !== 'all') {
+        Object.assign(existing, { source_variant: variant, coding_template: template, shelf_life_days: Number(days) });
+        return;
+      }
       if (existing.coding_template !== template || existing.shelf_life_days !== Number(days)) throw new Error(`Format berbeda untuk ${plant} / ${name} / ${destination}; perlu penentuan varian.`);
       duplicates++; return;
     }
@@ -107,7 +114,7 @@ export function importDatabase(primaryCSV, cartonCSV, flavorCSV) {
           byName.set(key, { id: key.replace(/\s+/g, '-'), name, code, source_destination: target });
         }
       }
-      destination.flavor_options = [...byName.values()];
+      destination.flavor_options = [...byName.values()].filter((flavor) => destination.source_variant.toLowerCase() === 'all' || destination.flavor_rules.some((rule) => rule.name.toLowerCase() === flavor.name.toLowerCase()));
       for (const rule of destination.flavor_rules || []) {
         if (!destination.flavor_options.some((flavor) => flavor.name.toLowerCase() === rule.name.toLowerCase())) throw new Error(`Varian primer tidak tersedia: ${product.name} / ${destination.name} / ${rule.name}`);
       }

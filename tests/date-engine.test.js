@@ -48,11 +48,11 @@ test('impor seluruh CSV sama dengan master JSON dan menggabungkan hanya duplikat
   const result = importDatabase(...files);
   const json = JSON.parse(await readFile(new URL('../data/products.json', import.meta.url)));
   assert.deepEqual(result.products, json);
-  assert.equal(result.sourceRows, 42);
+  assert.equal(result.sourceRows, 45);
   assert.equal(result.duplicates, 2);
   assert.equal(result.products.length, 6);
-  assert.equal(result.products.reduce((n, p) => n + p.variants.length, 0), 32);
-  assert.equal(result.cartonRows, 32);
+  assert.equal(result.products.reduce((n, p) => n + p.variants.length, 0), 35);
+  assert.equal(result.cartonRows, 35);
   assert.equal(result.flavorRows, 19);
   assert.deepEqual(result.warnings, []);
   assert.deepEqual([...new Set(json.map((p) => p.plant))], ['PSR1', 'PSR2']);
@@ -114,6 +114,48 @@ test('semua tujuan dan varian EM80 termasuk Matcha memakai umur simpan 243 hari'
   const rule = resolveFlavorRule(local, matcha);
   assert.equal(renderPackaging(rule.coding_template, today, rule.shelf_life_days), '280627 7AA\n08:05 PSR');
   assert.equal(renderPackaging(local.carton_template, today, rule.shelf_life_days, matcha.code), '280627 MATCHA 08:05 A PSR');
+});
+
+test('EM80 Philippines hanya menawarkan Matcha sesuai master primer', async () => {
+  const data = JSON.parse(await readFile(new URL('../data/products.json', import.meta.url)));
+  const philippines = data.find((p) => p.name === 'EM80').variants.find((d) => d.name === 'Ekspor Philippines');
+  assert.deepEqual(philippines.flavor_options.map((f) => f.name), ['Matcha']);
+  const matcha = philippines.flavor_options[0];
+  const rule = resolveFlavorRule(philippines, matcha);
+  const today = new Date(2026, 9, 28, 8, 5);
+  assert.equal(rule.shelf_life_days, 243);
+  assert.equal(renderPackaging(rule.coding_template, today, rule.shelf_life_days), 'PR : 28 OCT 26\nEX : 28 JUN 27\n9AA 08:05 PSR');
+  assert.equal(renderPackaging(philippines.carton_template, today, rule.shelf_life_days, matcha.code), '28 JUN 27 MATCHA 08:05 A PSR PH');
+});
+
+test('SQ120 Vietnam dan UAE memakai umur simpan 274 hari serta kode negara karton', async () => {
+  const data = JSON.parse(await readFile(new URL('../data/products.json', import.meta.url)));
+  const sq120 = data.find((p) => p.name === 'SQ120');
+  const today = new Date(2026, 9, 28, 8, 5);
+  for (const [name, suffix] of [['Ekspor Vietnam', 'VN'], ['Ekspor UAE', 'AE']]) {
+    const destination = sq120.variants.find((d) => d.name === name);
+    assert.equal(destination.shelf_life_days, 274);
+    assert.equal(renderPackaging(destination.coding_template, today, destination.shelf_life_days), '290727 7AA\n08:05 PSR');
+    assert.equal(renderPackaging(destination.carton_template, today, destination.shelf_life_days, 'ORIGINAL'), `290727 ORIGINAL 08:05 A PSR ${suffix}`);
+  }
+});
+
+test('impor tujuan khusus varian membatasi pilihan sampai aturan All tersedia', () => {
+  const header = 'Plant,Produk,Tujuan,Varian,Format Koding,Expired date\n';
+  const specific = 'PSR2,EM80,Ekspor Philippines,Matcha,DDMMYY 9AA,243\n';
+  const general = 'PSR2,EM80,Ekspor Philippines,All,DDMMYY 7AA,274\n';
+  const carton = 'Plant,Produk,Tujuan,Varian,Format Koding\nPSR2,EM80,Ekspor Philippines,All,DDMMYY VARIAN PSR PH\n';
+  const flavors = 'Varian,Print Karton,Produk,Tujuan\nMatcha,MATCHA,EM80,All\nChocolate,CHOCOLATE,EM80,All\n';
+  const restricted = importDatabase(header + specific, carton, flavors).products[0].variants[0];
+  assert.deepEqual(restricted.flavor_options.map((f) => f.name), ['Matcha']);
+  assert.equal(restricted.flavor_rules.length, 1);
+  const reordered = importDatabase(header + specific + general, carton, flavors).products[0].variants[0];
+  const ordered = importDatabase(header + general + specific, carton, flavors).products[0].variants[0];
+  assert.deepEqual(reordered, ordered);
+  assert.deepEqual(reordered.flavor_options.map((f) => f.name), ['Matcha', 'Chocolate']);
+  assert.equal(resolveFlavorRule(reordered, reordered.flavor_options[0]).shelf_life_days, 243);
+  assert.equal(resolveFlavorRule(reordered, reordered.flavor_options[1]).shelf_life_days, 274);
+  assert.throws(() => importDatabase(header + specific, carton, flavors.replace('Matcha,MATCHA,EM80,All\n', '')), /Varian primer tidak tersedia/);
 });
 
 test('ED karton FRUTAS mengikuti primer yang berbeda antara lokal dan ekspor', async () => {
