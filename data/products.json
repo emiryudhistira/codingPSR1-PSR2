@@ -714,18 +714,29 @@
       {
         "id": "prod-4-dest-9",
         "name": "Ekspor Philippines",
-        "source_variant": "Matcha",
+        "source_variant": "All",
         "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n9AA hh:mm PSR",
         "shelf_life_days": 243,
-        "flavor_rules": [
-          {
-            "name": "Matcha",
-            "coding_template": "PR : DD MMM YY\nEX : DD MMM YY\n9AA hh:mm PSR",
-            "shelf_life_days": 243
-          }
-        ],
         "carton_template": "DD MMM YY VARIAN hh:mm A PSR PH",
         "flavor_options": [
+          {
+            "id": "chocolate",
+            "name": "Chocolate",
+            "code": "CHOCOLATE",
+            "source_destination": "All"
+          },
+          {
+            "id": "hazelnut",
+            "name": "Hazelnut",
+            "code": "HAZELNUT",
+            "source_destination": "All"
+          },
+          {
+            "id": "marie-biscuits",
+            "name": "Marie Biscuits",
+            "code": "MARIE BISCUITS",
+            "source_destination": "All"
+          },
           {
             "id": "matcha",
             "name": "Matcha",

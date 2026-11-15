@@ -116,16 +116,18 @@ test('semua tujuan dan varian EM80 termasuk Matcha memakai umur simpan 243 hari'
   assert.equal(renderPackaging(local.carton_template, today, rule.shelf_life_days, matcha.code), '280627 MATCHA 08:05 A PSR');
 });
 
-test('EM80 Philippines hanya menawarkan Matcha sesuai master primer', async () => {
+test('EM80 Philippines menawarkan semua varian sesuai master primer All', async () => {
   const data = JSON.parse(await readFile(new URL('../data/products.json', import.meta.url)));
   const philippines = data.find((p) => p.name === 'EM80').variants.find((d) => d.name === 'Ekspor Philippines');
-  assert.deepEqual(philippines.flavor_options.map((f) => f.name), ['Matcha']);
-  const matcha = philippines.flavor_options[0];
-  const rule = resolveFlavorRule(philippines, matcha);
+  assert.equal(philippines.source_variant, 'All');
+  assert.deepEqual(philippines.flavor_options.map((f) => f.name), ['Chocolate', 'Hazelnut', 'Marie Biscuits', 'Matcha']);
   const today = new Date(2026, 9, 28, 8, 5);
-  assert.equal(rule.shelf_life_days, 243);
-  assert.equal(renderPackaging(rule.coding_template, today, rule.shelf_life_days), 'PR : 28 OCT 26\nEX : 28 JUN 27\n9AA 08:05 PSR');
-  assert.equal(renderPackaging(philippines.carton_template, today, rule.shelf_life_days, matcha.code), '28 JUN 27 MATCHA 08:05 A PSR PH');
+  for (const flavor of philippines.flavor_options) {
+    const rule = resolveFlavorRule(philippines, flavor);
+    assert.equal(rule.shelf_life_days, 243);
+    assert.equal(renderPackaging(rule.coding_template, today, rule.shelf_life_days), 'PR : 28 OCT 26\nEX : 28 JUN 27\n9AA 08:05 PSR');
+    assert.equal(renderPackaging(philippines.carton_template, today, rule.shelf_life_days, flavor.code), `28 JUN 27 ${flavor.code} 08:05 A PSR PH`);
+  }
 });
 
 test('SQ120 Vietnam dan UAE memakai umur simpan 274 hari serta kode negara karton', async () => {

@@ -29,9 +29,9 @@ Data terkini memiliki 45 baris primer, 35 baris karton, dan 19 baris aturan vari
 
 Nama produk di master varian dinormalisasi untuk perbedaan spasi, sehingga `AMD65` cocok dengan `AMD 65`. Daftar produk dipisahkan `;`. Aturan tujuan `All` berlaku umum; aturan tujuan spesifik menggantikannya untuk varian yang sama. Misalnya China memakai `BLU`, `ORI`, dan `STW`.
 
-**EM80** memerlukan pilihan varian untuk menampilkan primer dan karton. Semua varian, termasuk Matcha, memiliki umur simpan 243 hari. Data varian Original umum sudah memakai AMD65 sehingga cocok dengan AMD 65; koding Original untuk China tetap `ORI`, sedangkan tujuan umum menggunakan `ORIGINAL`.
+**EM80** memiliki umur simpan 243 hari untuk semua tujuan dan varian, termasuk Matcha. Tujuan dengan aturan primer khusus varian memerlukan pilihan varian untuk menampilkan primer dan karton. Data varian Original umum sudah memakai AMD65 sehingga cocok dengan AMD 65; koding Original untuk China tetap `ORI`, sedangkan tujuan umum menggunakan `ORIGINAL`.
 
-Tujuan **EM80 Ekspor Philippines** hanya tersedia untuk **Matcha**, mengikuti baris primer yang tersedia; kartonnya memakai akhiran `PH`. **SQ120 Ekspor Vietnam** dan **Ekspor UAE** memiliki umur simpan 274 hari dengan akhiran karton `VN` dan `AE`.
+Tujuan **EM80 Ekspor Philippines** tersedia untuk semua varian EM80: **Chocolate**, **Hazelnut**, **Marie Biscuits**, dan **Matcha**, mengikuti aturan primer `All`; kartonnya memakai akhiran `PH`. **SQ120 Ekspor Vietnam** dan **Ekspor UAE** memiliki umur simpan 274 hari dengan akhiran karton `VN` dan `AE`.
 
 Setelah ketiga CSV diperbarui, jalankan:
 
